@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:text="Telegram Settings"
+        android:title="Preference category">
+
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:key="telegram_reciever"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="The People will recieve your sms"
+            android:title="Edit text preference" />
+    </PreferenceCategory>
+</PreferenceScreen>
