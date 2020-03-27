@@ -1,5 +1,6 @@
 package dev.sawan.smsredirect
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
     private val TAG = "PermissionDemo"
     private val RECIEVESMS_CODE = 0
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +24,9 @@ class MainActivity : AppCompatActivity() {
             val task = SendTelegramMessageTask()
             task.execute("hi")
         }
-
+        btnSettings.setOnClickListener{
+            startActivity(Intent(this,SettingsActivity::class.java))
+        }
 
     }
 
